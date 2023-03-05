@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import banner_bg from "../../../assets/img/banner/banner-bg.png";
 import about_bg from "../../../assets/img/bg/about_bg.png";
@@ -6,6 +6,23 @@ import subscribe_bg from "../../../assets/img/bg/subscribe-bg.png";
 import product_bg from "../../../assets/img/bg/product_bg.png";
 
 const Home = () => {
+    useEffect(() => {
+        const script = document.createElement('script');
+        const script2 = document.createElement('script');
+      
+        script.src = "/countrymap.js";
+        script.async = true;
+        script2.src = "/mapdata.js";
+        script2.async = true;
+      
+        document.body.appendChild(script);
+        document.body.appendChild(script2);
+      
+        return () => {
+          document.body.removeChild(script);
+          document.body.removeChild(script2);
+        }
+      }, []);
     return (
         <>
             <section className="banner d-flex align-items-center justify-content-center" style={{ backgroundImage: `url(${banner_bg})` }}>
@@ -239,10 +256,10 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-12">
-                            <div className="d-flex justify-content-center">
-                                <div className="text-center position-relative">
-                                    
+                        <div className="col-6">
+                            <div className="d-flex">
+                                <div className="position-relative">
+                                    <div id="map"></div>
                                 </div>
                             </div>
                         </div>
