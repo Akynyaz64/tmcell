@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Outlet, ScrollRestoration } from "react-router-dom";
 
-import Navbar from "../components/UI/Navbar";
-import Footer from "../components/UI/Footer";
+import Navbar from "../components/site/UI/Navbar";
+import Footer from "../components/site/UI/Footer";
 
 function RootSiteLayout() {
     return (
