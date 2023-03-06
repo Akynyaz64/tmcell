@@ -12250,10 +12250,10 @@ textarea.theme-input-style {
 @media (max-width: 767px) {
     .subscribe_area_1 {
         top: 25px;
-        padding: 20px;
+        padding: 50px 30px;
         margin: 0px;
         width: 100%;
-        border-radius: 0;
+        border-radius: 5px;
     }
     .subscribe_area_1:after {
         left: 38%;

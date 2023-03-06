@@ -20,7 +20,7 @@ const Payment = () => {
                             <p className="mb-25">Online töleg hyzmatyndan peýdalanyp hasabyňyzy dolduryp bilersiňiz.</p>
                             <div className="form-group">
                                 <span>+993</span>
-                                <input className="subscribe_in" type="phone" placeholder="60 00 00 00" maxLength={8}/>
+                                <input className="subscribe_in" type="text" placeholder="60 00 00 00" maxLength={8} max={8} name="phone" required />
                             </div>
                             <button className="btn">Hasaby doldur</button>
                         </div>
