@@ -75,7 +75,7 @@ const Navbar = () => {
                     <div className="row align-items-center">
                         <div className="col-6">
                             <a href="index.html">
-                                <img src="assets/img/demo/logo.png" alt="" />
+                                <img src={logo} alt="" />
                             </a>
                         </div>
                         <div className="col-6 d-flex align-items-center justify-content-end">

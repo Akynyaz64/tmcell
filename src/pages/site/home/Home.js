@@ -18,6 +18,7 @@ const Home = () => {
         swipeToSlide: true,
         pauseOnHover: false,
         autoplaySpeed: 4000,
+        transformEnabled: false,
     };
     useEffect(() => {
         const script = document.createElement("script");
@@ -57,19 +58,18 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="col-lg-8">
-                            <div className="banner-image text-center mt-50 mt-lg-0">
-                                <img src={require("../../../assets/img/banner/banner-img.png")} alt="Banner" />
-                                <Slider {...settings}>
-                                    <div className="partner-item">
-                                        <h1>Hello</h1>
-                                    </div>
-                                    <div className="partner-item">
-                                        <h1>Hello</h1>
-                                    </div>
-                                    <div className="partner-item">
-                                        <h1>Hello</h1>
-                                    </div>
-                                </Slider>
+                            <div className="banner-image text-center mt-50 mt-lg-0 d-flex justify-content-center">
+                                <img src={require("../../../assets/img/banner/banner-img.png")} alt="Banner" style={{width: "20vw"}} />
+                                <div className="slider-container">
+                                    <Slider {...settings}>
+                                        <div className="slider-item">
+                                            <a href="https://it.net.tm"><img src={require("../../../assets/img/carousel/carousel-1.jpg")} alt="Banner" /></a>
+                                        </div>
+                                        <div className="slider-item">
+                                            <a href="https://it.net.tm"><img src={require("../../../assets/img/carousel/carousel-2.jpg")} alt="Banner" /></a>
+                                        </div>
+                                    </Slider>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -283,7 +283,7 @@ const Home = () => {
                         <div className="col-12 text-center">
                             <div className="d-flex">
                                 <div className="position-relative w-100 text-center">
-                                    <div id="map" style={{width:"auto!important"}}></div>
+                                    <div id="map" style={{width: "auto!important"}}></div>
                                 </div>
                             </div>
                         </div>
