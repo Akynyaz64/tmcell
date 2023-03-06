@@ -121,6 +121,9 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            <section className="pt-120 pb-90 product-bg" style={{backgroundImage: `url(${product_bg})`}}>
+                <Payment />
+            </section>
             <section className="pt-lg-80 overflow-hidden">
                 <div className="container">
                     <div className="row">
@@ -147,20 +150,6 @@ const Home = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section className="pt-120 pb-90 product-bg" style={{backgroundImage: `url(${product_bg})`}}>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-4">
-                            <div className="profile-page">
-                                <h1>Şahsy otag</h1>
-                            </div>
-                        </div>
-                        <div className="col-lg-8">
-                            <Payment />
                         </div>
                     </div>
                 </div>
