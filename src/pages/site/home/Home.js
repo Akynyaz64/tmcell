@@ -20,6 +20,7 @@ const Home = () => {
         autoplaySpeed: 4000,
         transformEnabled: false,
     };
+
     useEffect(() => {
         const script = document.createElement("script");
         const script2 = document.createElement("script");
@@ -37,6 +38,7 @@ const Home = () => {
             document.body.removeChild(script2);
         };
     }, []);
+    
     return (
         <>
             <section className="banner d-flex align-items-center justify-content-center" style={{backgroundImage: `url(${banner_bg})`}}>
@@ -63,10 +65,14 @@ const Home = () => {
                                 <div className="slider-container">
                                     <Slider {...settings}>
                                         <div className="slider-item">
-                                            <a href="https://it.net.tm"><img src={require("../../../assets/img/carousel/carousel-1.jpg")} alt="Banner" /></a>
+                                            <a href="https://it.net.tm">
+                                                <img src={require("../../../assets/img/carousel/carousel-1.jpg")} alt="Banner" />
+                                            </a>
                                         </div>
                                         <div className="slider-item">
-                                            <a href="https://it.net.tm"><img src={require("../../../assets/img/carousel/carousel-2.jpg")} alt="Banner" /></a>
+                                            <a href="https://it.net.tm">
+                                                <img src={require("../../../assets/img/carousel/carousel-2.jpg")} alt="Banner" />
+                                            </a>
                                         </div>
                                     </Slider>
                                 </div>
@@ -88,63 +94,13 @@ const Home = () => {
                             </a>
                         </div>
                         <div className="col-lg-8">
-                            <div className="row no-gutters card-box-style position-relative mt-50 mt-lg-0">
-                                <div className="col-md-6">
-                                    <div className="card">
-                                        <div className="watermark-icon">
-                                            <img src={require("../../../assets/icons/features/watermark-logo.png")} alt="" />
-                                        </div>
-                                        <div className="card-icon mb-30">
-                                            <img src={require("../../../assets/icons/features/01.png")} alt="" />
-                                        </div>
-                                        <div className="card-content">
-                                            <h3>Nyrhnamalar</h3>
-                                            <p>Öýjükli aragatnaşygyň tarifleri</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="card">
-                                        <div className="watermark-icon">
-                                            <img src={require("../../../assets/icons/features/watermark-logo.png")} alt="" />
-                                        </div>
-                                        <div className="card-icon mb-30">
-                                            <img src={require("../../../assets/icons/features/02.png")} alt="" />
-                                        </div>
-                                        <div className="card-content">
-                                            <h3>Hyzmatlar</h3>
-                                            <p>Öýjükli aragatnaşygyň hyzmatlary</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="card">
-                                        <div className="watermark-icon">
-                                            <img src={require("../../../assets/icons/features/watermark-logo.png")} alt="" />
-                                        </div>
-                                        <div className="card-icon mb-30">
-                                            <img src={require("../../../assets/icons/features/03.png")} alt="" />
-                                        </div>
-                                        <div className="card-content">
-                                            <h3>Internet</h3>
-                                            <p>Siz internet bukjasyny edinmek bilen, internede arzan birikmeklige mümkinçilik alýarsyňyz</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="card">
-                                        <div className="watermark-icon">
-                                            <img src={require("../../../assets/icons/features/watermark-logo.png")} alt="" />
-                                        </div>
-                                        <div className="card-icon mb-30">
-                                            <img src={require("../../../assets/icons/features/01.png")} alt="" />
-                                        </div>
-                                        <div className="card-content">
-                                            <h3>Rouming</h3>
-                                            <p>Gezelenje gitmezden ozal, öňi bilen, özüňiziň TMCELL aragatnaşyk hyzmatlaryny sazlaň</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div className="advice-container">
+                                <a href="https://it.net.tm" target={"_blank"} rel="noreferrer">
+                                    <img src={require("../../../assets/img/banner/phone_mock1.png")} alt="" id="img1" />
+                                </a>
+                                <a href="https://it.net.tm/tmcell" target={"_blank"} rel="noreferrer">
+                                    <img src={require("../../../assets/img/banner/phone_mock2.png")} alt="" id="img2" />
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -184,87 +140,11 @@ const Home = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-4">
-                            <div className="section-title mb-35">
-                                <span className="d-block text-uppercase fw-medium mb-15">Hosttop Product</span>
-                                <h2>We Provide Update Valuable Product</h2>
-                                <p>Easily organise your infrastructure projects get thrown accounts, with just the privilege click simply specify nodes.</p>
-                            </div>
-                            <a href="products.html" className="btn">
-                                See All Products
-                            </a>
-                        </div>
-                        <div className="col-lg-8">
-                            <div className="row position-relative mt-50 mt-lg-0">
-                                <div className="col-md-6">
-                                    <div className="card text-center box-shadow mb-30 bg-white">
-                                        <div className="watermark-icon">
-                                            <img src={require("../../../assets/icons/products/watermark/01.png")} alt="" />
-                                        </div>
-                                        <div className="card-icon mb-30">
-                                            <img src={require("../../../assets/icons/products/01.png")} alt="" />
-                                        </div>
-                                        <div className="card-content">
-                                            <h3>Private Networking</h3>
-                                            <p>Spin a managed Kubernetes clusters click Simply specify the nodes.</p>
-                                            <a href="product-details.html" className="btn btn-bordered">
-                                                Giňişleýin
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="card text-center box-shadow mb-30 bg-white">
-                                        <div className="watermark-icon">
-                                            <img src={require("../../../assets/icons/products/watermark/02.png")} alt="" />
-                                        </div>
-                                        <div className="card-icon mb-30">
-                                            <img src={require("../../../assets/icons/products/02.png")} alt="" />
-                                        </div>
-                                        <div className="card-content">
-                                            <h3>Container Registry</h3>
-                                            <p>Spin a managed Kubernetes clusters click Simply specify the nodes.</p>
-                                            <a href="product-details.html" className="btn btn-bordered">
-                                                Giňişleýin
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="card text-center box-shadow mb-30 bg-white">
-                                        <div className="watermark-icon">
-                                            <img src={require("../../../assets/icons/products/watermark/03.png")} alt="" />
-                                        </div>
-                                        <div className="card-icon mb-30">
-                                            <img src={require("../../../assets/icons/products/03.png")} alt="" />
-                                        </div>
-                                        <div className="card-content">
-                                            <h3>Terraform Provider</h3>
-                                            <p>Spin a managed Kubernetes clusters click Simply specify the nodes.</p>
-                                            <a href="product-details.html" className="btn btn-bordered">
-                                                Giňişleýin
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="card text-center box-shadow mb-30 bg-white">
-                                        <div className="watermark-icon">
-                                            <img src={require("../../../assets/icons/products/watermark/04.png")} alt="" />
-                                        </div>
-                                        <div className="card-icon mb-30">
-                                            <img src={require("../../../assets/icons/products/04.png")} alt="" />
-                                        </div>
-                                        <div className="card-content">
-                                            <h3>Custom Images</h3>
-                                            <p>Spin a managed Kubernetes clusters click Simply specify the nodes.</p>
-                                            <a href="product-details.html" className="btn btn-bordered">
-                                                Giňişleýin
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div className="profile-page">
+                                <h1>Şahsy otag</h1>
                             </div>
                         </div>
+                        <div className="col-lg-8"></div>
                     </div>
                 </div>
             </section>

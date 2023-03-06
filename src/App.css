@@ -6043,6 +6043,42 @@ small {
 #map_inner {
     height: auto!important;
 }
+@keyframes MoveUpDown1 {
+    0%, 100% {
+      top: 100px;
+    }
+    50% {
+      top: 110px;
+    }
+}
+@keyframes MoveUpDown2 {
+    0%, 100% {
+        top: 0;
+    }
+    50% {
+        top: 20px;
+    }
+}
+.advice-container{
+    position: relative;
+    height: 60vh;
+    margin-bottom: 100px;
+}
+.advice-container img {
+    height: 100%;
+}
+.advice-container #img1 {
+    position: absolute;
+    animation: MoveUpDown1 3s linear infinite;
+    top: 100px;
+    left: 10%;
+}
+.advice-container #img2 {
+    position: absolute;
+    animation: MoveUpDown2 2s linear infinite;
+    left: 50%;
+    top: 0;
+}
 @media (min-width: 576px) {
     .col-sm {
         -ms-flex-preferred-size: 0;
@@ -10900,7 +10936,7 @@ textarea.theme-input-style {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     color: #fff;
     padding: 14px 31px;
@@ -11130,6 +11166,12 @@ textarea.theme-input-style {
     .slider-container{
         width: calc(60vw - 10px)!important;
     }
+    .advice-container{
+        height: 50vh!important;
+    }
+    .advice-container img {
+        height: 70%!important;
+    }
 }
 .card {
     padding: 45px;
@@ -11198,6 +11240,13 @@ textarea.theme-input-style {
     .slider-container{
         width: calc(40vw - 10px)!important;
     }
+    .advice-container{
+        height: 50vh!important;
+    }
+    .advice-container img {
+        height: 70%!important;
+    }
+
 }
 .card-box-style > div:nth-child(1):hover ~ .box {
     left: 0;
@@ -12049,7 +12098,7 @@ textarea.theme-input-style {
     margin-bottom: 43px;
 }
 .banner-content .btn {
-    padding: 17px 37px;
+    padding: 15px 24px;
 }
 .banner-image img {
     margin-top: -2px;

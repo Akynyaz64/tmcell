@@ -1,11 +1,11 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 import RootSiteLayout from "./pages/RootSite";
 import RootAdminLayout from "./pages/RootSite";
 import AdminPage from "./pages/admin/home/Home";
 import ErrorPage from "./pages/Error";
 import HomePage from "./pages/site/home/Home";
-import { tokenLoader } from "./utils/auth";
+import {tokenLoader} from "./utils/auth";
 import "./App.css";
 
 const router = createBrowserRouter([
@@ -15,9 +15,7 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         id: "root",
         loader: tokenLoader,
-        children: [
-            { index: true, element: <HomePage /> },
-        ],
+        children: [{index: true, element: <HomePage />}],
     },
     {
         path: "/root_admin",
@@ -25,9 +23,7 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         id: "root_admin",
         loader: tokenLoader,
-        children: [
-            { index: true, element: <AdminPage /> },
-        ],
+        children: [{index: true, element: <AdminPage />}],
     },
 ]);
 
