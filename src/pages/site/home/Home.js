@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from "react";
+import Slider from "react-slick";
 
 import banner_bg from "../../../assets/img/banner/banner-bg.png";
 import about_bg from "../../../assets/img/bg/about_bg.png";
@@ -6,26 +7,38 @@ import subscribe_bg from "../../../assets/img/bg/subscribe-bg.png";
 import product_bg from "../../../assets/img/bg/product_bg.png";
 
 const Home = () => {
+    const settings = {
+        arrows: false,
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        swipeToSlide: true,
+        pauseOnHover: false,
+        autoplaySpeed: 4000,
+    };
     useEffect(() => {
-        const script = document.createElement('script');
-        const script2 = document.createElement('script');
-      
+        const script = document.createElement("script");
+        const script2 = document.createElement("script");
+
         script.src = "/countrymap.js";
         script.async = true;
         script2.src = "/mapdata.js";
         script2.async = true;
-      
+
         document.body.appendChild(script);
         document.body.appendChild(script2);
-      
+
         return () => {
-          document.body.removeChild(script);
-          document.body.removeChild(script2);
-        }
-      }, []);
+            document.body.removeChild(script);
+            document.body.removeChild(script2);
+        };
+    }, []);
     return (
         <>
-            <section className="banner d-flex align-items-center justify-content-center" style={{ backgroundImage: `url(${banner_bg})` }}>
+            <section className="banner d-flex align-items-center justify-content-center" style={{backgroundImage: `url(${banner_bg})`}}>
                 <div className="container container-xxl">
                     <div className="row align-items-center">
                         <div className="col-lg-4">
@@ -46,12 +59,23 @@ const Home = () => {
                         <div className="col-lg-8">
                             <div className="banner-image text-center mt-50 mt-lg-0">
                                 <img src={require("../../../assets/img/banner/banner-img.png")} alt="Banner" />
+                                <Slider {...settings}>
+                                    <div className="partner-item">
+                                        <h1>Hello</h1>
+                                    </div>
+                                    <div className="partner-item">
+                                        <h1>Hello</h1>
+                                    </div>
+                                    <div className="partner-item">
+                                        <h1>Hello</h1>
+                                    </div>
+                                </Slider>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section className="pt-120 pb-120 product-bg" style={{ backgroundImage: `url(${about_bg})` }}>
+            <section className="pt-120 pb-120 product-bg" style={{backgroundImage: `url(${about_bg})`}}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-4">
@@ -135,7 +159,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="col-lg-9 d-flex align-items-center">
-                            <div className="newsletter-bg-img" style={{ backgroundImage: `url(${subscribe_bg})` }}></div>
+                            <div className="newsletter-bg-img" style={{backgroundImage: `url(${subscribe_bg})`}}></div>
                             <div className="pl-lg-50 pt-100 pb-100 w-100">
                                 <div className="row no-gutters justify-content-end">
                                     <div className="col-lg-10">
@@ -156,7 +180,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="pt-120 pb-90 product-bg" style={{ backgroundImage: `url(${product_bg})` }}>
+            <section className="pt-120 pb-90 product-bg" style={{backgroundImage: `url(${product_bg})`}}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-4">
@@ -256,10 +280,10 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-6">
+                        <div className="col-12 text-center">
                             <div className="d-flex">
-                                <div className="position-relative">
-                                    <div id="map"></div>
+                                <div className="position-relative w-100 text-center">
+                                    <div id="map" style={{width:"auto!important"}}></div>
                                 </div>
                             </div>
                         </div>

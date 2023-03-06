@@ -6120,6 +6120,16 @@ small {
 .offset-11 {
     margin-left: 91.66667%;
 }
+#map{
+    width: auto!important;
+}
+#map svg {
+    height: auto!important;
+    width: calc(100vw - 35vw)!important;
+}
+#map_inner {
+    height: auto!important;
+}
 @media (min-width: 576px) {
     .col-sm {
         -ms-flex-preferred-size: 0;
