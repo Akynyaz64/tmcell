@@ -94,7 +94,7 @@ const Home = () => {
                         </div>
                         <div className="col-lg-8">
                             <div className="banner-image text-center mt-50 mt-lg-0 d-flex justify-content-center">
-                                <img src={require("../../../assets/img/banner/banner-img.png")} alt="Banner" style={{width: "20vw"}} />
+                                <img src={require("../../../assets/img/banner/banner-img.png")} alt="Banner" style={{width: "45vw"}} />
                                 <div className="slider-container">
                                     <Slider {...settings}>
                                         <div className="slider-item">

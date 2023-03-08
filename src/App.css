@@ -12171,7 +12171,15 @@ textarea.theme-input-style {
     font-weight: 400;
     font-family: "Fira Sans", sans-serif;
 }
-.subscribe_area_1 .form-group {
+.subscribe_area_1 .form-group .subscribe_in {
+    padding-left: 72px;
+}
+.subscribe_area_1 .form-group2 .subscribe_in {
+    padding-left: 15px;
+    padding-right: 72px;
+}
+.subscribe_area_1 .form-group,
+.subscribe_area_1 .form-group2 {
     position: relative;
 }
 .subscribe_area_1 .form-group span {
@@ -12183,7 +12191,17 @@ textarea.theme-input-style {
     font-size: 16px;
     color: #000;
     opacity: 0.9;
-    border-right: 1px solid #5b5858!important;
+    border-right: 1px solid #5b5858 !important;
+}
+.subscribe_area_1 .form-group2 span {
+    position: absolute;
+    height: 16px;
+    top: 11px;
+    right: 12px;
+    padding-right: 12px;
+    font-size: 16px;
+    color: #000;
+    opacity: 0.9;
 }
 .subscribe_area_1 .subscribe_in::-webkit-input-placeholder {
     opacity: 0.8;

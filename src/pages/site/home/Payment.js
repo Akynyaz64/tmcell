@@ -22,6 +22,10 @@ const Payment = () => {
                                 <span>+993</span>
                                 <input className="subscribe_in" type="text" placeholder="60 00 00 00" maxLength={8} max={8} name="phone" required />
                             </div>
+                            <div className="form-group2">
+                                <span>TMT</span>
+                                <input className="subscribe_in" type="number" placeholder="20" maxLength={3} max={500} name="amount" required />
+                            </div>
                             <button className="btn">Hasaby doldur</button>
                         </div>
                     </div>
