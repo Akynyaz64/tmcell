@@ -27,7 +27,7 @@ const Home = () => {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
         swipeToSlide: true,
@@ -47,7 +47,7 @@ const Home = () => {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 },
             },
@@ -142,36 +142,117 @@ const Home = () => {
             <section className="pt-120 pb-90 product-bg" style={{backgroundImage: `url(${product_bg})`}}>
                 <Payment />
             </section>
-            <section className="pt-lg-80 overflow-hidden">
+            <section className="pt-lg-80 pb-80 overflow-hidden news-container">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-3" dir="rtl">
-                            <div className="subscribe-image d-none d-lg-block">
-                                <img className="radius-5" src={require("../../../assets/about_tmcell.jpg")} alt="" />
+                        <div className="col-12">
+                            <div className="section-title text-center mb-60">
+                                <span className="d-block text-uppercase fw-medium mb-15">Altyn Asyr</span>
+                                <h2>Soňky täzelikler</h2>
                             </div>
                         </div>
-                        <div className="col-lg-9 d-flex align-items-center">
-                            <div className="newsletter-bg-img" style={{backgroundImage: `url(${subscribe_bg})`}}></div>
-                            <div className="pl-lg-50 pt-100 pb-100 w-100">
-                                <div className="row no-gutters justify-content-end">
-                                    <div className="col-lg-10">
-                                        <div className="section-title">
-                                            <h2 className="text-white">Täzelikler barada habarly boluň!</h2>
-                                            <p className="text-white">"Altyn Asyr" ýapyk görnüşli paýdarlar jemgyýeti barada we ýurdumyzyň aragatnaşyk ulgamy barada täzelikler bilen habarly boluň.</p>
-                                        </div>
-                                        <form action="https://themelooks.us13.list-manage.com/subscribe/post?u=79f0b132ec25ee223bb41835f&id=f4e0e93d1d" className="newsletter-form">
-                                            <input type="email" className="theme-input-style" placeholder="Email salgyňyz" />{" "}
-                                            <button type="button" className="btn bg-white">
-                                                Abuna ýazyl
-                                            </button>
-                                        </form>
+                    </div>
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="news-image-tablet">
+                                <img src={require("../../../assets/img/banner/news_tablet1.png")} alt="" id="tablet1" />
+                                <div className="news-container">
+                                    <div className="row">
+                                        <Slider {...news_settings} className="w-100">
+                                            <div className="col">
+                                                <div className="single-post-item radius-5 overflow-hidden mb-30">
+                                                    <a href="blog-details.html" className="post-thumbnail overflow-hidden d-flex">
+                                                        <img src={require("../../../assets/blog/01.png")} alt="" />
+                                                    </a>
+                                                    <div className="post-content">
+                                                        <ul className="post-meta nav mb-10">
+                                                            <li>
+                                                                <i className="far fa-calendar-alt"></i> <a href="index.html#">26 Aug, 2020</a>
+                                                            </li>
+                                                        </ul>
+                                                        <h3 className="post-title mb-10">
+                                                            <a href="blog-details.html">«Altyn asyr» </a>
+                                                        </h3>
+                                                        <a href="blog-details.html" className="btn btn-bordered">
+                                                            Giňişleýin
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col">
+                                                <div className="single-post-item radius-5 overflow-hidden mb-30">
+                                                    <a href="blog-details.html" className="post-thumbnail overflow-hidden d-flex">
+                                                        <img src={require("../../../assets/blog/03.png")} alt="" />
+                                                    </a>
+                                                    <div className="post-content">
+                                                        <ul className="post-meta nav mb-10">
+                                                            <li>
+                                                                <i className="far fa-calendar-alt"></i> <a href="index.html#">26 Aug, 2020</a>
+                                                            </li>
+                                                        </ul>
+                                                        <h3 className="post-title mb-10">
+                                                            <a href="blog-details.html">«Altyn asyr» öýjükli</a>
+                                                        </h3>
+                                                        <a href="blog-details.html" className="btn btn-bordered">
+                                                            Giňişleýin
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col">
+                                                <div className="single-post-item radius-5 overflow-hidden mb-30">
+                                                    <a href="blog-details.html" className="post-thumbnail overflow-hidden d-flex">
+                                                        <img src={require("../../../assets/blog/01.png")} alt="" />
+                                                    </a>
+                                                    <div className="post-content">
+                                                        <ul className="post-meta nav mb-10">
+                                                            <li>
+                                                                <i className="far fa-calendar-alt"></i> <a href="index.html#">26 Aug, 2020</a>
+                                                            </li>
+                                                        </ul>
+                                                        <h3 className="post-title mb-10">
+                                                            <a href="blog-details.html">«Altyn asyr» öýjükli</a>
+                                                        </h3>
+                                                        <a href="blog-details.html" className="btn btn-bordered">
+                                                            Giňişleýin
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col">
+                                                <div className="single-post-item radius-5 overflow-hidden mb-30">
+                                                    <a href="blog-details.html" className="post-thumbnail overflow-hidden d-flex">
+                                                        <img src={require("../../../assets/blog/03.png")} alt="" />
+                                                    </a>
+                                                    <div className="post-content">
+                                                        <ul className="post-meta nav mb-10">
+                                                            <li>
+                                                                <i className="far fa-calendar-alt"></i> <a href="index.html#">26 Aug, 2020</a>
+                                                            </li>
+                                                        </ul>
+                                                        <h3 className="post-title mb-10">
+                                                            <a href="blog-details.html">«Altyn asyr» öýjükli </a>
+                                                        </h3>
+                                                        <a href="blog-details.html" className="btn btn-bordered">
+                                                            Giňişleýin
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </Slider>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="news-image-tablet">
+                                <img src={require("../../../assets/img/banner/news_tablet2.png")} alt="" id="tablet2" />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
             <section className="bg-light pt-120 pb-120 overflow-hidden">
                 <div className="container">
                     <div className="row">
@@ -206,100 +287,24 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="row">
-                        <Slider {...news_settings} className="w-100">
-                            <div className="col">
-                                <div className="single-post-item radius-5 overflow-hidden mb-30">
-                                    <a href="blog-details.html" className="post-thumbnail overflow-hidden d-flex">
-                                        <img src={require("../../../assets/blog/01.png")} alt="" />
-                                    </a>
-                                    <div className="post-content">
-                                        <ul className="post-meta nav mb-10">
-                                            <li>
-                                                <i className="far fa-calendar-alt"></i> <a href="index.html#">26 Aug, 2020</a>
-                                            </li>
-                                        </ul>
-                                        <h3 className="post-title mb-10">
-                                            <a href="blog-details.html">«Altyn asyr» öýjükli aragatnaşyk operatory täze internet bukjalaryny hödürleýär</a>
-                                        </h3>
-                                        <div className="post-summary">
-                                            <p>«Altyn asyr» öýjükli aragatnaşyk operatory ilatyň gyzyklanmalaryny göz öňünde tutmak bilen...</p>
-                                        </div>
-                                        <a href="blog-details.html" className="btn btn-bordered">
-                                            Giňişleýin
-                                        </a>
-                                    </div>
-                                </div>
+                        <div className="col-6">
+                            <div className="mockup-phone">
+                                <img src="https://klike.net/uploads/posts/2020-01/1578300192_33.jpg" alt="phone" />
+                                <div className="phone-body"></div>
                             </div>
-                            <div className="col">
-                                <div className="single-post-item radius-5 overflow-hidden mb-30">
-                                    <a href="blog-details.html" className="post-thumbnail overflow-hidden d-flex">
-                                        <img src={require("../../../assets/blog/03.png")} alt="" />
-                                    </a>
-                                    <div className="post-content">
-                                        <ul className="post-meta nav mb-10">
-                                            <li>
-                                                <i className="far fa-calendar-alt"></i> <a href="index.html#">26 Aug, 2020</a>
-                                            </li>
-                                        </ul>
-                                        <h3 className="post-title mb-10">
-                                            <a href="blog-details.html">«Altyn asyr» öýjükli aragatnaşyk operatory täze internet bukjalaryny hödürleýär</a>
-                                        </h3>
-                                        <div className="post-summary">
-                                            <p>«Altyn asyr» öýjükli aragatnaşyk operatory ilatyň gyzyklanmalaryny göz öňünde tutmak bilen...</p>
-                                        </div>
-                                        <a href="blog-details.html" className="btn btn-bordered">
-                                            Giňişleýin
-                                        </a>
-                                    </div>
-                                </div>
+                        </div>
+                        <div className="col-6">
+                            <div className="mockup-phone">
+                                <img src="https://klike.net/uploads/posts/2020-01/1578300192_33.jpg" alt="phone" />
+                                <div className="phone-body"></div>
                             </div>
-                            <div className="col">
-                                <div className="single-post-item radius-5 overflow-hidden mb-30">
-                                    <a href="blog-details.html" className="post-thumbnail overflow-hidden d-flex">
-                                        <img src={require("../../../assets/blog/01.png")} alt="" />
-                                    </a>
-                                    <div className="post-content">
-                                        <ul className="post-meta nav mb-10">
-                                            <li>
-                                                <i className="far fa-calendar-alt"></i> <a href="index.html#">26 Aug, 2020</a>
-                                            </li>
-                                        </ul>
-                                        <h3 className="post-title mb-10">
-                                            <a href="blog-details.html">«Altyn asyr» öýjükli aragatnaşyk operatory täze internet bukjalaryny hödürleýär</a>
-                                        </h3>
-                                        <div className="post-summary">
-                                            <p>«Altyn asyr» öýjükli aragatnaşyk operatory ilatyň gyzyklanmalaryny göz öňünde tutmak bilen...</p>
-                                        </div>
-                                        <a href="blog-details.html" className="btn btn-bordered">
-                                            Giňişleýin
-                                        </a>
-                                    </div>
-                                </div>
+                        </div>
+                        <div className="col-6">
+                            <div className="mockup-phone">
+                                <img src="https://klike.net/uploads/posts/2020-01/1578300192_33.jpg" alt="phone" />
+                                <div className="phone-body"></div>
                             </div>
-                            <div className="col">
-                                <div className="single-post-item radius-5 overflow-hidden mb-30">
-                                    <a href="blog-details.html" className="post-thumbnail overflow-hidden d-flex">
-                                        <img src={require("../../../assets/blog/03.png")} alt="" />
-                                    </a>
-                                    <div className="post-content">
-                                        <ul className="post-meta nav mb-10">
-                                            <li>
-                                                <i className="far fa-calendar-alt"></i> <a href="index.html#">26 Aug, 2020</a>
-                                            </li>
-                                        </ul>
-                                        <h3 className="post-title mb-10">
-                                            <a href="blog-details.html">«Altyn asyr» öýjükli aragatnaşyk operatory täze internet bukjalaryny hödürleýär</a>
-                                        </h3>
-                                        <div className="post-summary">
-                                            <p>«Altyn asyr» öýjükli aragatnaşyk operatory ilatyň gyzyklanmalaryny göz öňünde tutmak bilen...</p>
-                                        </div>
-                                        <a href="blog-details.html" className="btn btn-bordered">
-                                            Giňişleýin
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </Slider>
+                        </div>
                     </div>
                 </div>
             </section>
