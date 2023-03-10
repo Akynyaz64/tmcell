@@ -9,7 +9,7 @@ const Payment = () => {
                         <div className="d-flex flex-column justify-content-center">
                             <h1 className="text-white mb-25">Şahsy otag</h1>
                             <p className="text-white">Hasabyňyzy we ykjam hyzmatlaryňyzy dolandyrmak üçin iň ýokary derejeli mümkinçiliklerden peýdalanyň.</p>
-                            <a href="https://hyzmat.tmcell.tm" class="btn bg-white">
+                            <a href="https://hyzmat.tmcell.tm" className="btn bg-white">
                                 Ulgama gir →
                             </a>
                         </div>
