@@ -135,18 +135,17 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="col-lg-8">
-                            <div className="banner-image text-center mt-50 mt-lg-0 d-flex justify-content-center">
-                                <img src={require("../../../assets/img/banner/banner-img.png")} alt="Banner" style={{ width: "45vw" }} />
-                                <div className="slider-container">
+                            <div className="banner-image text-center mt-50 mt-lg-0 d-flex justify-content">
+                                <div className="banner-slider">
                                     <Slider {...settings}>
                                         <div className="slider-item">
                                             <a href="https://it.net.tm" target={"_blank"} rel="noreferrer">
-                                                <img src={require("../../../assets/img/carousel/carousel-1.jpg")} alt="Banner" />
+                                                <img src={require("../../../assets/img/carousel/carousel-1.png")} alt="Banner" />
                                             </a>
                                         </div>
                                         <div className="slider-item">
                                             <a href="https://it.net.tm" target={"_blank"} rel="noreferrer">
-                                                <img src={require("../../../assets/img/carousel/carousel-2.jpg")} alt="Banner" />
+                                                <img src={require("../../../assets/img/carousel/carousel-2.png")} alt="Banner" />
                                             </a>
                                         </div>
                                     </Slider>

@@ -11158,23 +11158,6 @@ textarea.theme-input-style {
 .back-to-top.show:hover {
     opacity: 1;
 }
-@media only screen and (max-width: 480px) {
-    .btn-group .btn {
-        padding: 10px 20px;
-    }
-    .banner-image img {
-        width: 60vw !important;
-    }
-    .slider-container {
-        width: calc(60vw - 10px) !important;
-    }
-    .advice-container {
-        height: 50vh !important;
-    }
-    .advice-container img {
-        height: 70% !important;
-    }
-}
 .card {
     padding: 45px;
     position: relative;
@@ -11235,9 +11218,6 @@ textarea.theme-input-style {
         width: 100%;
         height: 25%;
         left: 0;
-    }
-    .banner-image img {
-        width: 40vw !important;
     }
     .slider-container {
         width: calc(40vw - 10px) !important;
@@ -11718,6 +11698,9 @@ textarea.theme-input-style {
     .newsletter-bg-img {
         background-size: center 100%;
         left: -200px;
+    }    
+    .banner-slider {
+        width: 70vw!important;
     }
 }
 @media only screen and (min-width: 992px) {
@@ -12123,6 +12106,9 @@ textarea.theme-input-style {
     .client_area {
         padding: 50px 0px 75px;
         height: auto;
+    }    
+    .banner-slider {
+        width: 60vw!important;
     }
 }
 
@@ -12327,17 +12313,9 @@ textarea.theme-input-style {
     margin-top: -2px;
     z-index: 1;
 }
-.slider-container {
-    position: absolute;
-    width: 68%;
-    top: 12vh;
-    left: 3.8vw;
+.banner-slider {
+    width: 45vw;
     z-index: 9;
-    transform: skew(-13deg);
-}
-.slider-container .slider-item img {
-    border-radius: 2%;
-    height: 48vh;
 }
 .single-post-item {
     -webkit-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.07);
@@ -12595,6 +12573,20 @@ textarea.theme-input-style {
   100% {
     transform: translateY(-50%);
   }
+}
+@media only screen and (max-width: 480px) {
+    .btn-group .btn {
+        padding: 10px 20px;
+    }
+    .banner-slider {
+        width: 80vw!important;
+    }
+    .advice-container {
+        height: 50vh !important;
+    }
+    .advice-container img {
+        height: 70% !important;
+    }
 }
 
 body {
