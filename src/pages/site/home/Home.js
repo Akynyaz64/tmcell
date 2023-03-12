@@ -11,11 +11,11 @@ import mobile_app2 from "../../../assets/img/banner/mobile-app-2.png";
 import mobile_app3 from "../../../assets/img/banner/mobile-app-3.png";
 import mobile_app4 from "../../../assets/img/banner/mobile-app-4.png";
 import mobile_app5 from "../../../assets/img/banner/mobile-app-5.png";
-import toleg_icon from "../../../assets/icons/mail.svg";
-import saz_icon from "../../../assets/icons/mail.svg";
-import tv_icon from "../../../assets/icons/mail.svg";
-import lk_icon from "../../../assets/icons/mail.svg";
-import chat_icon from "../../../assets/icons/mail.svg";
+import saz_icon from "../../../assets/icons/apps/app1.png";
+import tv_icon from "../../../assets/icons/apps/app2.png";
+import lk_icon from "../../../assets/icons/apps/app3.png";
+import chat_icon from "../../../assets/icons/apps/app4.png";
+import toleg_icon from "../../../assets/icons/apps/app5.png";
 
 const Home = () => {
     const settings = {
@@ -385,59 +385,92 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
-            <section className="pt-120 pb-90 apps-container">
+            <section className="apps-container">
                 <div className="container">
                     <div className="row">
-                        <div className="col-6">
-                            <div className="section-title mb-60">
+                        <div className="col-12 col-lg-6 col-md-6 col-xl-6">
+                            <div className="section-title mb-60 mt-45">
                                 <h2>Biziň mobil goşundylarymyzdan peýdalanyň</h2>
-                                <div className="row text-center">
-                                    <div className="col-4">
-                                        <img src={toleg_icon} alt="icon" />
-                                        <h5 className="my-4">TMCELL Töleg</h5>
+                                <div className="row text-center justify-content-center mt-25 w-75">
+                                    <div className="col-4 app-container">
+                                        <img src={toleg_icon} alt="icon" className="app-icon" />
+                                        <h5>TMCELL Töleg</h5>
                                     </div>
-                                    <div className="col-4">
-                                        <img src={saz_icon} alt="icon" />
-                                        <h5 className="my-4">TMCELL Sazz</h5>
+                                    <div className="col-4 app-container">
+                                        <img src={saz_icon} alt="icon" className="app-icon" />
+                                        <h5>TMCELL Sazz</h5>
                                     </div>
-                                    <div className="col-4">
-                                        <img src={tv_icon} alt="icon" />
-                                        <h5 className="my-4">Mobile TV</h5>
+                                    <div className="col-4 app-container">
+                                        <img src={tv_icon} alt="icon" className="app-icon" />
+                                        <h5>Mobile TV</h5>
                                     </div>
-                                    <div className="col-4">
-                                        <img src={lk_icon} alt="icon" />
-                                        <h5 className="my-4">Şahsy otag</h5>
+                                    <div className="col-4 app-container">
+                                        <img src={lk_icon} alt="icon" className="app-icon" />
+                                        <h5>Şahsy otag</h5>
                                     </div>
-                                    <div className="col-4">
-                                        <img src={chat_icon} alt="icon" />
-                                        <h5 className="my-4">Tmchat</h5>
+                                    <div className="col-4 app-container">
+                                        <img src={chat_icon} alt="icon" className="app-icon" />
+                                        <h5>Tmchat</h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-6">
-                            <div className="mobile-apps">
-                                <div className="phone-apps" id="apps1">
-                                    <img src={mobile_app3} alt="phone" />
-                                    <img src={mobile_app1} alt="phone" />
-                                    <img src={mobile_app5} alt="phone" />
-                                    <img src={mobile_app4} alt="phone" />
-                                    <img src={mobile_app2} alt="phone" />
+                        <div className="col-6 phones-slider-container">
+                            <div className="phones-slider">
+                                <div className="slide-track">
+                                    <div className="slide">
+                                        <img src={mobile_app3} alt="phone" />
+                                    </div>
+                                    <div className="slide">
+                                        <img src={mobile_app1} alt="phone" />
+                                    </div>
+                                    <div className="slide">
+                                        <img src={mobile_app5} alt="phone" />
+                                    </div>
+                                    <div className="slide">
+                                        <img src={mobile_app4} alt="phone" />
+                                    </div>
+                                    <div className="slide">
+                                        <img src={mobile_app2} alt="phone" />
+                                    </div>
                                 </div>
-                                <div className="phone-apps" id="apps2">
-                                    <img src={mobile_app2} alt="phone" />
-                                    <img src={mobile_app5} alt="phone" />
-                                    <img src={mobile_app4} alt="phone" />
-                                    <img src={mobile_app3} alt="phone" />
-                                    <img src={mobile_app1} alt="phone" />
+                            </div>
+                            <div className="phones-slider">
+                                <div className="slide-track">
+                                    <div className="slide">
+                                        <img src={mobile_app2} alt="phone" />
+                                    </div>
+                                    <div className="slide">
+                                        <img src={mobile_app5} alt="phone" />
+                                    </div>
+                                    <div className="slide">
+                                        <img src={mobile_app4} alt="phone" />
+                                    </div>
+                                    <div className="slide">
+                                        <img src={mobile_app3} alt="phone" />
+                                    </div>
+                                    <div className="slide">
+                                        <img src={mobile_app1} alt="phone" />
+                                    </div>
                                 </div>
-                                <div className="phone-apps" id="apps3">
-                                    <img src={mobile_app1} alt="phone" />
-                                    <img src={mobile_app4} alt="phone" />
-                                    <img src={mobile_app3} alt="phone" />
-                                    <img src={mobile_app2} alt="phone" />
-                                    <img src={mobile_app5} alt="phone" />
+                            </div>
+                            <div className="phones-slider">
+                                <div className="slide-track">
+                                    <div className="slide">
+                                        <img src={mobile_app1} alt="phone" />
+                                    </div>
+                                    <div className="slide">
+                                        <img src={mobile_app4} alt="phone" />
+                                    </div>
+                                    <div className="slide">
+                                        <img src={mobile_app3} alt="phone" />
+                                    </div>
+                                    <div className="slide">
+                                        <img src={mobile_app2} alt="phone" />
+                                    </div>
+                                    <div className="slide">
+                                        <img src={mobile_app5} alt="phone" />
+                                    </div>
                                 </div>
                             </div>
                         </div>

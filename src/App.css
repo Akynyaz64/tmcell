@@ -12517,61 +12517,62 @@ textarea.theme-input-style {
     min-height: 80vh;
     overflow: hidden;
 }
-.mobile-apps {
-    position: absolute;
-    right: 5%;
-    top: -120%;
-    display: flex;
-    transform: rotate(35deg);
-    width: 40vw;
+.apps-container .app-icon {
+    width: 90px;
 }
-.mobile-apps .phone-apps {
-    margin-left: 10px;
-    margin-right: 10px;
-    animation: mymove 3s;
+.apps-container .app-container h5 {
+    margin-top: 20px;
 }
-.mobile-apps .phone-apps#apps1 {
-    margin-top: 0px;
-    animation-iteration-count: infinite;
-    animation-duration: 20s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-name: slidedown;
+.apps-container .app-container {
+    padding: 20px 0;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
-.mobile-apps .phone-apps#apps2 {
-    margin-top: -120px;
-    animation-iteration-count: infinite;
-    animation-duration: 20s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-name: slidedown;
+.apps-container .app-container:hover {
+    background-color: #fff;
+    box-shadow: 0 30px 60px 0 rgb(90 116 148 / 40%);
+    transform: scale(1.03);
 }
-.mobile-apps .phone-apps#apps3 {
-    margin-top: -50px;
-    animation-iteration-count: infinite;
-    animation-duration: 20s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-name: slidedown;
+
+:root {
+    --container-width: 150%;
+    --box-width: 100px;
+    --animation-speed: 20s;
 }
-.mobile-apps .phone-apps img {
+.phones-slider-container{
+    height: 80vh;
     width: 100%;
-    margin: 10px;
+    right: 0;
 }
-@keyframes slidedown {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0);
-    }
+.phones-slider {
+    height: 25vw;
+	background: transparent;
+	margin: auto;
+	position: relative;
+	transform: rotate(-50deg);
 }
-@keyframes slideup {
+.phones-slider .slide-track {
+    animation: scroll var(--animation-speed) linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+.phones-slider .slide-track img {
+    transform: rotate(90deg);
+    width: 15vw;
+}
+.phones-slider .slide {
+    height: 100px;
+    width: 250px;
+}
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 2.5))}
+}
+@keyframes box {
     0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-50%);
+        transform: translateY(calc(80vh + var(--box-width)));
     }
 }
 @media only screen and (max-width: 480px) {
@@ -12590,213 +12591,212 @@ textarea.theme-input-style {
 }
 
 @keyframes wel {
-  0% {
-    left: 30px;
-    opacity: 0;
-  }
-  100% {
-    left: 0px;
-    opacity: 1;
-  }
+    0% {
+        left: 30px;
+        opacity: 0;
+    }
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
 }
 @-webkit-keyframes wel {
-  0% {
-    left: 30px;
-    opacity: 0;
-  }
-  100% {
-    left: 0px;
-    opacity: 1;
-  }
+    0% {
+        left: 30px;
+        opacity: 0;
+    }
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
 }
 
- .map {
-  width: calc(100% - 100px);
-  height: 100%;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.map {
+    width: calc(100% - 100px);
+    height: 100%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
- .map svg {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  -o-object-fit: contain;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+.map svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    -o-object-fit: contain;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
 }
- .map svg .mod {
-  display: block;
+.map svg .mod {
+    display: block;
 }
- .map svg .add_map.active {
-  fill: #004960 !important;
+.map svg .add_map.active {
+    fill: #004960 !important;
 }
- .map svg g {
-  stroke: red;
-  stroke-width: 20px;
-  cursor: pointer;
+.map svg g {
+    stroke: red;
+    stroke-width: 20px;
+    cursor: pointer;
 }
- .map svg g path {
-  stroke: #fff;
-  cursor: pointer;
+.map svg g path {
+    stroke: #fff;
+    cursor: pointer;
 }
- .map svg g path:hover {
-  fill: #007398;
+.map svg g path:hover {
+    fill: #007398;
 }
- .map svg g path.active {
-  fill: #007398;
+.map svg g path.active {
+    fill: #007398;
 }
 .address .mod {
-  display: none;
-  position: relative;
+    display: none;
+    position: relative;
 }
 .address .mod.active {
-  display: block;
-  -webkit-animation: wel 0.3s linear;
-          animation: wel 0.3s linear;
+    display: block;
+    -webkit-animation: wel 0.3s linear;
+    animation: wel 0.3s linear;
 }
 
 @keyframes wel {
-  0% {
-    left: 20px;
-  }
-  100% {
-    left: 0;
-  }
+    0% {
+        left: 20px;
+    }
+    100% {
+        left: 0;
+    }
 }
 @-webkit-keyframes wel {
-  0% {
-    left: 20px;
-  }
-  100% {
-    left: 0;
-  }
+    0% {
+        left: 20px;
+    }
+    100% {
+        left: 0;
+    }
 }
 .etrap {
-  fill: rgba(171, 182, 201, 0.7);
-  stroke: #fff;
-  stroke-width: 5px;
-  -webkit-transition: all 0.2s ease-in-out 0s;
-  transition: all 0.2s ease-in-out 0s;
-  -moz-transition: all 0.2s ease-in-out 0s;
-  cursor: pointer;
+    fill: rgba(171, 182, 201, 0.7);
+    stroke: #fff;
+    stroke-width: 5px;
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+    cursor: pointer;
 }
 .etrap:hover {
-  fill: #004960;
+    fill: #004960;
 }
 .etrap.active {
-  fill: #abb6c9;
+    fill: #abb6c9;
 }
 
 .wel_city {
-  display: none;
+    display: none;
 }
 .wel_city circle {
-  stroke-width: 245px;
-  fill: #004960;
-  stroke: #004960;
+    stroke-width: 245px;
+    fill: #004960;
+    stroke: #004960;
 }
 .wel_city path {
-  fill: #007398;
-  display: none;
+    fill: #007398;
+    display: none;
 }
 .wel_city.active {
-  display: block;
+    display: block;
 }
 
 .str0 {
-  stroke: #0B617E;
-  stroke-width: 45px;
+    stroke: #0b617e;
+    stroke-width: 45px;
 }
 
 .str1 {
-  stroke: #0B617E !important;
-  stroke-width: 20px;
+    stroke: #0b617e !important;
+    stroke-width: 20px;
 }
 
 .fil0 {
-  fill: none;
+    fill: none;
 }
 
 .Welayat.active .etrap {
-  fill: #abb6c9;
+    fill: #abb6c9;
 }
 .Welayat.active .etrap:hover {
-  fill: #004960;
+    fill: #004960;
 }
 .Welayat.active .etrap.active {
-  fill: #004960;
+    fill: #004960;
 }
 .Welayat.active #ag {
-  fill: #007398;
+    fill: #007398;
 }
 .Welayat.active #ag.actives {
-  fill: #004960;
+    fill: #004960;
 }
 
 #ag {
-  fill: #007398;
+    fill: #007398;
 }
 #ag.actives {
-  fill: #004960;
+    fill: #004960;
 }
 
 .borders {
-  z-index: -1;
-  pointer-events: none;
-  fill: none;
+    z-index: -1;
+    pointer-events: none;
+    fill: none;
 }
 
 .tkm-border:hover {
-  fill: unset;
+    fill: unset;
 }
-
 
 @media (max-width: 1240px) {
-  .address_col {
-    margin: 0 10px;
-    width: calc(50% - 20px);
-  }
-  .address_content-info {
-    width: calc(50% - 10px);
-    margin-right: 10px;
-  }
-  .address_content .map {
-    width: calc(50% - 10px);
-    margin-left: 10px;
-  }
+    .address_col {
+        margin: 0 10px;
+        width: calc(50% - 20px);
+    }
+    .address_content-info {
+        width: calc(50% - 10px);
+        margin-right: 10px;
+    }
+    .address_content .map {
+        width: calc(50% - 10px);
+        margin-left: 10px;
+    }
 }
 @media (max-width: 1024px) {
-  .address_col {
-    margin: 10px 0;
-    width: 100%;
-  }
-  .address_col .map svg {
-    width: 60%;
-  }
-  .address_content .map {
-    width: 100%;
-    margin-left: 0;
-  }
-  .address_content .map_inner {
-    height: 450px;
-  }
+    .address_col {
+        margin: 10px 0;
+        width: 100%;
+    }
+    .address_col .map svg {
+        width: 60%;
+    }
+    .address_content .map {
+        width: 100%;
+        margin-left: 0;
+    }
+    .address_content .map_inner {
+        height: 450px;
+    }
 }
 @media (max-width: 650px) {
-  .address_col .map svg {
-    width: 80%;
-  }
+    .address_col .map svg {
+        width: 80%;
+    }
 }
 @media (max-width: 450px) {
-  .address_col .map svg {
-    width: 100%;
-  }
+    .address_col .map svg {
+        width: 100%;
+    }
 }
