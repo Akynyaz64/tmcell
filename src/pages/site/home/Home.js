@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Slider from "react-slick";
 
 import Payment from "./Payment";
+import Map from "./Map";
 import banner_bg from "../../../assets/img/banner/banner-bg.png";
 import about_bg from "../../../assets/img/bg/about_bg.png";
 import product_bg from "../../../assets/img/bg/product_bg.png";
@@ -95,24 +96,6 @@ const Home = () => {
             },
         ],
     };
-
-    useEffect(() => {
-        const script = document.createElement("script");
-        const script2 = document.createElement("script");
-
-        script.src = "/countrymap.js";
-        script.async = true;
-        script2.src = "/mapdata.js";
-        script2.async = true;
-
-        document.body.appendChild(script);
-        document.body.appendChild(script2);
-
-        return () => {
-            document.body.removeChild(script);
-            document.body.removeChild(script2);
-        };
-    }, []);
 
     return (
         <>
@@ -395,7 +378,7 @@ const Home = () => {
                         <div className="col-12 text-center">
                             <div className="d-flex">
                                 <div className="position-relative w-100 text-center">
-                                    <div id="map" style={{ width: "auto!important" }}></div>
+                                    <Map />
                                 </div>
                             </div>
                         </div>
