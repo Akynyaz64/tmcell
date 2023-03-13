@@ -12556,7 +12556,8 @@ textarea.theme-input-style {
 .phones-slider .slide-track {
     animation: scroll var(--animation-speed) linear infinite;
     display: flex;
-    width: calc(250px * 14);
+    width: 150vw;
+    justify-content: space-between;
 }
 .phones-slider .slide-track img {
     transform: rotate(90deg);
